@@ -3,6 +3,19 @@
   "version": "0.1.0",
   "description": "Session-agnostic CLI table rendering: adaptive column widths, ANSI/OSC8-aware truncation, alignment, headers",
   "type": "module",
+  "license": "MIT",
+  "author": "Ashton Eby",
+  "homepage": "https://github.com/echo-bravo-yahoo/tables#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echo-bravo-yahoo/tables.git"
+  },
+  "bugs": {
+    "url": "https://github.com/echo-bravo-yahoo/tables/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -16,7 +29,8 @@
     "compile": "tsc --emitDeclarationOnly && esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run compile",
-    "test": "node --experimental-strip-types --test test/**/*.test.ts"
+    "test": "node --experimental-strip-types --test 'test/**/*.test.ts'",
+    "test:coverage": "node --experimental-strip-types --experimental-test-coverage --test 'test/**/*.test.ts'"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
