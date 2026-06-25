@@ -1,1 +1,0 @@
-{"version":3,"file":"hyperlink.js","sourceRoot":"","sources":["../src/hyperlink.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,UAAU,SAAS,CAAC,GAAW,EAAE,IAAY,EAAE,IAA0B;IAC7E,IAAI,CAAC,IAAI,EAAE,KAAK;QAAE,OAAO,IAAI,CAAC;IAC9B,OAAO,WAAW,GAAG,SAAS,IAAI,gBAAgB,CAAC;AACrD,CAAC"}

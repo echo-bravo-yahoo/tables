@@ -1,7 +1,9 @@
 node_modules/
 *.log
 
-# dist/ is committed (not built on install): npm 11.x has a git-dependency
-# `prepare` bug (it passes conflicting --prefer-offline/--prefer-online flags to
-# its nested install), so a committed build is the portable way to make
-# `github:owner/tables#tag` resolve on a plain `npm install` across hosts.
+# dist/ is committed and string-width is bundled into it (esbuild), so the
+# package has zero runtime dependencies. npm 11.x aborts the nested install it
+# runs for any git dependency that has its own deps or build step (it passes
+# conflicting --prefer-offline/--prefer-online flags). A committed, dependency-
+# free bundle makes `github:owner/tables#tag` resolve on a plain `npm install`
+# across npm versions with no build step.

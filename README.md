@@ -6,8 +6,9 @@ plus rows into aligned terminal lines and returns them; the caller prints.
 
 It is colour-agnostic — colour and links are injected by the caller through
 per-column hooks, so there is no `chalk` peer dependency and no `process` use.
-The only runtime dependency is [`string-width`](https://github.com/sindresorhus/string-width)
-(correct CJK / emoji / zero-width measurement).
+[`string-width`](https://github.com/sindresorhus/string-width) (correct CJK /
+emoji / zero-width measurement) is bundled into the published build, so the
+package has **zero runtime dependencies**.
 
 ## Install
 
@@ -15,10 +16,11 @@ The only runtime dependency is [`string-width`](https://github.com/sindresorhus/
 npm install @echobravoyahoo/tables
 ```
 
-The built `dist/` is committed, so a git dependency (`github:<owner>/tables#<tag>`)
-resolves on a plain `npm install` with no build step or dev toolchain — portable
-across npm versions. Run `npm run build` after changing `src/` and commit the
-refreshed `dist/` alongside.
+The built `dist/` is committed and dependency-free (string-width bundled in), so
+a git dependency (`github:<owner>/tables#<tag>`) resolves on a plain `npm install`
+with no build step, dev toolchain, or nested dependency install — portable across
+npm versions. Run `npm run build` after changing `src/` and commit the refreshed
+`dist/` alongside.
 
 ## Usage
 
