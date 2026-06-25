@@ -19,8 +19,10 @@ npm install @echobravoyahoo/tables
 The built `dist/` is committed and dependency-free (string-width bundled in), so
 a git dependency (`github:<owner>/tables#<tag>`) resolves on a plain `npm install`
 with no build step, dev toolchain, or nested dependency install — portable across
-npm versions. Run `npm run build` after changing `src/` and commit the refreshed
-`dist/` alongside.
+npm versions. Run `npm run compile` after changing `src/` and commit the refreshed
+`dist/` alongside. (The script is named `compile`, not `build`: npm runs a `build`
+script during git-dependency install, which would re-trigger the nested-install
+failure above.)
 
 ## Usage
 

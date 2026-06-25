@@ -13,9 +13,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --emitDeclarationOnly && esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js",
+    "compile": "tsc --emitDeclarationOnly && esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run compile",
     "test": "node --experimental-strip-types --test test/**/*.test.ts"
   },
   "devDependencies": {
