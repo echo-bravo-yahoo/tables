@@ -88,9 +88,10 @@ export function fixedWidth(str: string, width: number): string {
     let truncated = '';
     let w = 0;
     for (const char of inner) {
-      if (w >= width - 2) break;
+      const cw = displayWidth(char);
+      if (w + cw > width - 2) break;
       truncated += char;
-      w += 1;
+      w += cw;
     }
     const content = truncated + '…';
     const wrapped = osc8 ? `\x1b]8;;${osc8[1]}\x1b\\${content}\x1b]8;;\x1b\\` : content;

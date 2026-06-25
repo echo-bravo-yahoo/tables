@@ -127,5 +127,10 @@ describe('width', () => {
       const trailing = fixed.slice(closeIdx + '\x1b]8;;\x1b\\'.length);
       assert.strictEqual(trailing, '        ');
     });
+    it('accounts for double-width characters when truncating', () => {
+      // ↔ (U+2194) has display width 2; the truncation loop must not count it as 1
+      const result = fixedWidth('abc↔def', 8);
+      assert.strictEqual(displayWidth(result), 8);
+    });
   });
 });
