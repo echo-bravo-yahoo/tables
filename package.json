@@ -1,6 +1,6 @@
 {
   "name": "@echobravoyahoo/tables",
-  "version": "0.1.1-alpha.0",
+  "version": "0.1.1",
   "description": "Session-agnostic CLI table rendering: adaptive column widths, ANSI/OSC8-aware truncation, alignment, headers",
   "type": "module",
   "license": "MIT",
