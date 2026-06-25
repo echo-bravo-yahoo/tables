@@ -1,9 +1,4 @@
 node_modules/
 *.log
 
-# dist/ is committed and string-width is bundled into it (esbuild), so the
-# package has zero runtime dependencies. npm 11.x aborts the nested install it
-# runs for any git dependency that has its own deps or build step (it passes
-# conflicting --prefer-offline/--prefer-online flags). A committed, dependency-
-# free bundle makes `github:owner/tables#tag` resolve on a plain `npm install`
-# across npm versions with no build step.
+dist/
