@@ -1,3 +1,7 @@
 node_modules/
-dist/
 *.log
+
+# dist/ is committed (not built on install): npm 11.x has a git-dependency
+# `prepare` bug (it passes conflicting --prefer-offline/--prefer-online flags to
+# its nested install), so a committed build is the portable way to make
+# `github:owner/tables#tag` resolve on a plain `npm install` across hosts.

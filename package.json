@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "prepare": "tsc",
+    "prepublishOnly": "tsc",
     "test": "node --experimental-strip-types --test test/**/*.test.ts"
   },
   "dependencies": {

@@ -15,9 +15,10 @@ The only runtime dependency is [`string-width`](https://github.com/sindresorhus/
 npm install @echobravoyahoo/tables
 ```
 
-The package builds itself on install via a `prepare` script, so a git dependency
-(`github:<owner>/tables#<tag>`) resolves on a plain `npm install` with no manual
-build step.
+The built `dist/` is committed, so a git dependency (`github:<owner>/tables#<tag>`)
+resolves on a plain `npm install` with no build step or dev toolchain — portable
+across npm versions. Run `npm run build` after changing `src/` and commit the
+refreshed `dist/` alongside.
 
 ## Usage
 
