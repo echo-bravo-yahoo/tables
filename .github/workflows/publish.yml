@@ -23,6 +23,6 @@ jobs:
       - run: npm install -g npm@latest
       - run: npm ci
       - run: npm run test:coverage
-      # OIDC auth (no NODE_AUTH_TOKEN); provenance is automatic from a public repo.
+      # --provenance triggers the OIDC exchange; no NODE_AUTH_TOKEN needed.
       # prepublishOnly (compile) runs first, so the tarball ships a fresh bundle.
-      - run: npm publish
+      - run: npm publish --provenance
