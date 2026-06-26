@@ -23,6 +23,7 @@ jobs:
       - run: npm install -g npm@latest
       - run: npm ci
       - run: npm run test:coverage
-      # --provenance triggers the OIDC exchange; no NODE_AUTH_TOKEN needed.
-      # prepublishOnly (compile) runs first, so the tarball ships a fresh bundle.
-      - run: npm publish --provenance
+      # OIDC trusted publishing authenticates via the id-token (no NODE_AUTH_TOKEN);
+      # provenance is generated automatically from the public repo. prepublishOnly
+      # (compile) runs first, so the tarball ships a fresh bundle.
+      - run: npm publish

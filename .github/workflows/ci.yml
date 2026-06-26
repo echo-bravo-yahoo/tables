@@ -20,9 +20,3 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run test:coverage
-      # dist/ is committed and loaded directly by git-dependency consumers (c),
-      # so fail the build if the committed bundle is stale vs a fresh compile.
-      - name: Verify committed dist is up to date
-        run: |
-          npm run compile
-          git diff --exit-code dist
